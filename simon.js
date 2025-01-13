@@ -8,7 +8,13 @@ let body = document.querySelector('body');
 let currentScore = 0; // Example: Update this value as the game progresses
 let highScore = localStorage.getItem('highScore') || 0; // Retrieve from storage or default to 0
 
+function toggleRules(){
 
+    const rules = document.getElementById("rulesbox");
+
+    rules.classList.toggle("active");
+
+}
 document.addEventListener("keypress", function () {
     if ( started == false ) {
         console.log('game started');
