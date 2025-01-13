@@ -8,8 +8,21 @@
     <title>Simon Game</title>
 </head>
 <body>
+    <div id="rulesbox">
+        <h1>Simon Games Rules</h1>
+        <ol class="ruleslist">
+            The object of the game is to remember the pattern as far as you can and get the high score. <br> Follow the below steps:
+            <li>Press any key to start the game.</li>
+            <li>A color will flash.</li>
+            <li>Press that color to repeat the sequence.</li>
+            <li>The game will add another color to the sequence which you then repeat by pressing in the correct order.</li>
+            <li>The game will continue to add colors after you successfully repeat the sequence back.</li>
+            <li>When you don't complete a sequence successfully, the screen will blink in red and display your score</li>
+        </ol>
+        <button class="closebtn" onclick="toggleRules()">&#10060;</i></button>
+    </div>
     <div class="mainbox">
-        <h1>Simon Game</h1>
+        <h1>Simon Game <span><button class="startbtn" onclick="toggleRules()">Learn How to Play</button></span></h1>
         <h2>Press any key to start the game</h2>
         <div class="btn-container">
             <div class="btn one" type="button" id="one"></div>
