@@ -5,6 +5,7 @@ let level = 0;
 let btns = ['one', 'two', 'three', 'four'];
 let h2 = document.querySelector('h2');
 let body = document.querySelector('body');
+let mainbox = document.querySelector('.mainbox');
 let currentScore = 0; // Example: Update this value as the game progresses
 let highScore = localStorage.getItem('highScore') || 0; // Retrieve from storage or default to 0
 
@@ -56,7 +57,7 @@ function checkAns (idx) {
     }
     else {
         h2.innerHTML = `Game Over! <br><mark>Your score was ${level} </mark> <br> Press any key to start again !`
-        body.style.backgroundColor='red';
+        mainbox.style.backgroundColor='red';
         setTimeout(reset,500);
     }
 }
@@ -78,7 +79,7 @@ function reset () {
     gameSeq = [];
     userSeq = [];
     level = 0;
-    body.style.backgroundColor='';
+    mainbox.style.backgroundColor= '';
     updateHighScore(currentScore);
 }
 function updateHighScore(score) {
