@@ -4,6 +4,8 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    background: url(bgsimon.jpg);
+    background-size: cover;
 }
 .mainbox {
     display: flex;
@@ -13,6 +15,45 @@ body {
     height: 750px;
     position: sticky;
     top: 50px;
+}
+#rulesbox {    
+    position: fixed;
+    top: -100%;
+    left: 50%; 
+    transform: translate(-50%,-50%); 
+    background-color: #fff;
+    z-index: 1000;
+    width: 90vw;
+    height: 80vh;
+    padding: 80px 50px 50px;
+    transition: 0.5s;
+    border-radius: 4px;
+    visibility: hidden;
+    background-image: linear-gradient(grey, white, grey);
+}
+#rulesbox.active{
+    visibility: visible;
+    top: 50%;
+}
+.ruleslist {
+    font-size: 1.5rem;
+    text-align: left;
+}
+.startbtn {
+    border: none;
+    width: 150px;
+    letter-spacing: 0.1rem;
+    background-color: #7c3af8;
+    color: #ffffff;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 4px;
+}
+.closebtn {
+    position: absolute;
+    cursor: pointer;
+    top: 15px;
+    right: 20px;
 }
 .btn-container {
     display: flex;
